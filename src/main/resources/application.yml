@@ -8,4 +8,7 @@ spring:
     username: sa
     password: password
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  graphql:
+    graphiql:
+      enabled: true
