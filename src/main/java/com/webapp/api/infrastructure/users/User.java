@@ -3,11 +3,13 @@ package com.webapp.api.infrastructure.users;
 import com.webapp.api.domain.users.NewUserDto;
 import com.webapp.api.domain.users.UserDto;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
+@NoArgsConstructor
 @ToString
 @Getter
 @Setter
