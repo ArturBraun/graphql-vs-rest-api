@@ -13,7 +13,7 @@ public class GraphqlController {
   private final UserService userService;
 
   @QueryMapping
-  public UserDto getUserById(@Argument Long id) {
+  public UserDto userById(@Argument Long id) {
     return userService.getUser(id);
   }
 }

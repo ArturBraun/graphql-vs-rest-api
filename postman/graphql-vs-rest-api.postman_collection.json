@@ -28,6 +28,32 @@
 			"response": []
 		},
 		{
+			"name": "users-graphql-get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  userById(id: 1){\r\n    id\r\n    name\r\n    surname\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "users-rest-post",
 			"request": {
 				"method": "POST",
