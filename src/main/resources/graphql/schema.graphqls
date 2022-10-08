@@ -2,6 +2,15 @@ type Query {
     userById(id: ID!): User
 }
 
+type Mutation {
+    createUser(userInput: UserInput): User
+}
+
+input UserInput {
+    name: String!
+    surname: String!
+}
+
 type User {
     id: ID!
     name: String!

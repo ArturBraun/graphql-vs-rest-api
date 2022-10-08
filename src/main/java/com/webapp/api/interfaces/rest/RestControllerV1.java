@@ -1,6 +1,6 @@
 package com.webapp.api.interfaces.rest;
 
-import com.webapp.api.domain.users.NewUserDto;
+import com.webapp.api.domain.users.UserInput;
 import com.webapp.api.domain.users.UserService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -30,8 +30,8 @@ public class RestControllerV1 {
   }
 
   @PostMapping(value = "/users")
-  public ResponseEntity createUser(@RequestBody NewUserDto newUserDto) {
-    var user = userService.addUser(newUserDto);
+  public ResponseEntity createUser(@RequestBody UserInput userInput) {
+    var user = userService.addUser(userInput);
     return ResponseEntity.ok(user);
   }
 }

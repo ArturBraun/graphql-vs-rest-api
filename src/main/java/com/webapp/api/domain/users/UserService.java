@@ -11,10 +11,10 @@ public class UserService {
   private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
   private final UserRepository userRepository;
 
-  public UserDto addUser(NewUserDto newUserDto) {
-    LOG.info("Adding new user - {}", newUserDto);
-    var user = userRepository.save(newUserDto);
-    LOG.info("New user added - {}", newUserDto);
+  public UserDto addUser(UserInput userInput) {
+    LOG.info("Adding new user - {}", userInput);
+    var user = userRepository.save(userInput);
+    LOG.info("New user added - {}", userInput);
     return user;
   }
 

@@ -1,7 +1,7 @@
 package com.webapp.api.infrastructure.users;
 
-import com.webapp.api.domain.users.NewUserDto;
 import com.webapp.api.domain.users.UserDto;
+import com.webapp.api.domain.users.UserInput;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,7 +32,7 @@ public class User {
     this.surname = surname;
   }
 
-  public static User of(NewUserDto userDto) {
+  public static User of(UserInput userDto) {
     return new User(userDto.getName(), userDto.getSurname());
   }
 

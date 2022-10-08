@@ -6,29 +6,38 @@
 	},
 	"item": [
 		{
-			"name": "users-rest-get",
+			"name": "graphql-users-create",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n  createUser(userInput: {name:\"Jan\", surname:\"Kowalski\"}){\r\n    id\r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/api/v1/users/1",
+					"raw": "http://localhost:8080/graphql",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"api",
-						"v1",
-						"users",
-						"1"
+						"graphql"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "users-graphql-get",
+			"name": "graphql-users-get",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -54,7 +63,29 @@
 			"response": []
 		},
 		{
-			"name": "users-rest-post",
+			"name": "rest-users-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rest-users-post",
 			"request": {
 				"method": "POST",
 				"header": [],
